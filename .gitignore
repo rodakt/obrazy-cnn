@@ -1,0 +1,6 @@
+/_site/
+/.quarto/
+__pycache__/
+.ipynb_checkpoints/
+
+**/*.quarto_ipynb

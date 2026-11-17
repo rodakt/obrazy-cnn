@@ -1,0 +1,17 @@
+project:
+  type: website
+  render:
+    - index.qmd          # notatnik nie jest stroną — tylko plik do pobrania
+  resources:
+    - warsztaty_cnn.ipynb
+    - warsztat.py
+    - dane/*.part
+
+website:
+  title: "Obrazy i sieci konwolucyjne"
+  repo-url: https://github.com/rodakt/obrazy-cnn
+
+lang: pl
+format:
+  html:
+    theme: cosmo

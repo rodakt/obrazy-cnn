@@ -1,0 +1,28 @@
+---
+title: "Jak komputer uczy się rozpoznawać rysunki?"
+---
+
+Warsztaty o sieciach konwolucyjnych: mała sieć uczy się rozpoznawać rysunki z gry
+[Quick, Draw!](https://quickdraw.withgoogle.com), a Ty rysujesz myszą i sprawdzasz, co o nich myśli.
+
+[Pobierz notatnik](warsztaty_cnn.ipynb){.btn .btn-primary .btn-lg download="warsztaty_cnn.ipynb"}
+
+## Na warsztatach
+
+Pobierz notatnik i otwórz go w Jupyterze — prowadzący pokaże jak.
+Uruchamiaj komórki po kolei: zaznacz komórkę i naciśnij **Shift+Enter**.
+
+## W domu
+
+1. Zainstaluj Pythona 3 z [python.org](https://www.python.org/downloads/).
+   Na Linuksie doinstaluj okienka do rysowania: `sudo apt install python3-tk`.
+2. Zainstaluj pakiety: `pip install numpy jupyter`
+3. Pobierz notatnik, w jego katalogu uruchom `jupyter notebook` i otwórz plik.
+
+Bez internetu: pobierz [całe repozytorium jako ZIP](https://github.com/rodakt/obrazy-cnn/archive/refs/heads/main.zip),
+rozpakuj i otwórz notatnik w rozpakowanym katalogu.
+
+---
+
+Kod: licencja MIT. Tekst: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Rysunki: *Quick, Draw! Dataset*, Google Creative Lab, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
