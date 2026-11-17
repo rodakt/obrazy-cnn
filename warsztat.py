@@ -375,32 +375,7 @@ def rozpoznaj(model, rysunki, dane):
     _html("".join(s))
 
 
-# ---------------------------------------------------------------- oszukaj sieć: bazgroły i obroty
-
-def _bazgrol(rng):
-    """Losowy bazgrół: 1–3 kreski, każda to błądzenie z bezwładnością (płynnie skręca)."""
-    kreski = []
-    for _ in range(rng.integers(1, 4)):
-        p, kat = rng.uniform(0, 150, 2), rng.uniform(0, 2*np.pi); k = [p]
-        for _ in range(rng.integers(8, 40)):
-            kat += rng.normal(0, 0.6); p = p + 10*np.array([np.cos(kat), np.sin(kat)]); k.append(p)
-        kreski.append(np.array(k))
-    return kreski
-
-
-def bazgroly(model, dane, ile=12, seed=None, n=200):
-    """Losowe bazgroły (żadna z kategorii) i odpowiedzi sieci. Statystyka liczona na n bazgrołach, pokazane pierwsze ile."""
-    rng = np.random.default_rng(seed)
-    B = np.array([rasteryzuj(_bazgrol(rng)) for _ in range(max(n, ile))])
-    P = model.prawdopodobienstwa(B); odp, pew = P.argmax(1), P.max(1)
-    pew_test = model.prawdopodobienstwa(dane.Xte[:500]).max(1)
-    ile_k = np.bincount(odp, minlength=len(dane.klasy)); k = ile_k.argmax()
-    obrazki = "".join(_img(B[i], 3, f"{dane.nazwy[odp[i]]} {pew[i]:.0%}", "#c62828" if pew[i] > .9 else "#333") for i in range(ile))
-    _html(obrazki + f'<p>Średnia pewność sieci na {len(B)} losowych bazgrołach: <b>{pew.mean():.0%}</b> '
-          f'(na prawdziwych rysunkach testowych: {pew_test.mean():.0%}). '
-          f'Pewność powyżej 90% (na czerwono): <b>{(pew > .9).sum()} z {len(B)}</b>. '
-          f'Najczęstsza odpowiedź: <b>{dane.nazwy[k]}</b> ({ile_k[k]} z {len(B)}).</p>')
-
+# ---------------------------------------------------------------- obrócona ryba
 
 def _obroc_kreski(kreski, kat):
     """Obrót kresek o kat stopni przeciwnie do ruchu wskazówek zegara (oś y w dół, jak na ekranie)."""
