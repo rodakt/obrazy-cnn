@@ -5,7 +5,13 @@ title: "Jak komputer uczy się rozpoznawać rysunki?"
 Warsztaty o sieciach konwolucyjnych: mała sieć uczy się rozpoznawać rysunki z gry
 [Quick, Draw!](https://quickdraw.withgoogle.com), a Ty rysujesz myszą i sprawdzasz, co o nich myśli.
 
-[Pobierz notatnik](warsztaty_cnn.ipynb){.btn .btn-primary .btn-lg download="warsztaty_cnn.ipynb"}
+```{=html}
+<!-- pełny adres: względny link .ipynb Quarto podmienia na wyrenderowaną stronę .html -->
+<p>
+<a href="https://rodakt.github.io/obrazy-cnn/warsztaty_cnn.ipynb" download="warsztaty_cnn.ipynb" target="_blank" class="btn btn-primary btn-lg">Pobierz notatnik</a>
+<a href="warsztaty_cnn.html" target="_blank" class="btn btn-outline-primary btn-lg">Podgląd notatnika</a>
+</p>
+```
 
 ## Na warsztatach
 

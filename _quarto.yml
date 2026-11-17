@@ -1,7 +1,8 @@
 project:
   type: website
   render:
-    - index.qmd          # notatnik nie jest stroną — tylko plik do pobrania
+    - index.qmd
+    - warsztaty_cnn.ipynb   # podgląd notatnika (bez uruchamiania kodu)
   resources:
     - warsztaty_cnn.ipynb
     - warsztat.py
