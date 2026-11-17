@@ -14,10 +14,16 @@ Uruchamiaj komórki po kolei: zaznacz komórkę i naciśnij **Shift+Enter**.
 
 ## W domu
 
-1. Zainstaluj Pythona 3 z [python.org](https://www.python.org/downloads/).
-   Na Linuksie doinstaluj okienka do rysowania: `sudo apt install python3-tk`.
-2. Zainstaluj pakiety: `pip install numpy jupyter`
-3. Pobierz notatnik, w jego katalogu uruchom `jupyter notebook` i otwórz plik.
+1. Zainstaluj **Miniforge** ze strony [conda-forge.org/download](https://conda-forge.org/download/)
+   (Windows: zwykły instalator, wszystkie opcje domyślne).
+2. Uruchom **Miniforge Prompt** z menu Start i wpisz: `mamba install -y numpy notebook`
+   (macOS i Linux: to samo polecenie w terminalu).
+3. Pobierz notatnik do Pobranych.
+4. W Miniforge Prompt wpisz `jupyter notebook`. Jupyter otworzy się w przeglądarce:
+   wejdź do katalogu `Downloads` i kliknij notatnik.
+5. Uruchamiaj komórki po kolei (**Shift+Enter**).
+
+Następnym razem wystarczą kroki 4 i 5.
 
 Bez internetu: pobierz [całe repozytorium jako ZIP](https://github.com/rodakt/obrazy-cnn/archive/refs/heads/main.zip),
 rozpakuj i otwórz notatnik w rozpakowanym katalogu.

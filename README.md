@@ -8,12 +8,16 @@ Strona: <https://rodakt.github.io/obrazy-cnn>
 
 ## Jak uruchomić w domu
 
-1. Zainstaluj Pythona 3 z [python.org](https://www.python.org/downloads/).
-   Na Linuksie doinstaluj okienka do rysowania: `sudo apt install python3-tk`.
-2. Zainstaluj pakiety: `pip install numpy jupyter`
-3. Pobierz [`warsztaty_cnn.ipynb`](https://rodakt.github.io/obrazy-cnn/warsztaty_cnn.ipynb),
-   w jego katalogu uruchom `jupyter notebook` i otwórz plik.
-4. Uruchamiaj komórki po kolei (**Shift+Enter**). Pierwsza pobierze resztę potrzebnych plików.
+1. Zainstaluj **Miniforge** ze strony [conda-forge.org/download](https://conda-forge.org/download/)
+   (Windows: zwykły instalator, wszystkie opcje domyślne).
+2. Uruchom **Miniforge Prompt** z menu Start i wpisz: `mamba install -y numpy notebook`
+   (macOS i Linux: to samo polecenie w terminalu).
+3. Pobierz notatnik [`warsztaty_cnn.ipynb`](https://rodakt.github.io/obrazy-cnn/warsztaty_cnn.ipynb) do Pobranych.
+4. W Miniforge Prompt wpisz `jupyter notebook`. Jupyter otworzy się w przeglądarce:
+   wejdź do katalogu `Downloads` i kliknij notatnik.
+5. Uruchamiaj komórki po kolei (**Shift+Enter**). Pierwsza pobierze resztę potrzebnych plików.
+
+Następnym razem wystarczą kroki 4 i 5.
 
 Bez internetu: pobierz całe repozytorium (**Code → Download ZIP**), rozpakuj
 i otwórz notatnik w rozpakowanym katalogu.
